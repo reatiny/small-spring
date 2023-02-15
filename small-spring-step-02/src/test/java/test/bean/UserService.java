@@ -1,4 +1,4 @@
-package com.ray.springframework.test.bean;
+package test.bean;
 
 /**
  * @author ray 2023/2/14
