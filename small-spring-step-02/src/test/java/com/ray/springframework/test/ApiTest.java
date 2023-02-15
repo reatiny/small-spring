@@ -1,19 +1,17 @@
-package test;
+package com.ray.springframework.test;
 
 import com.ray.springframework.beans.factory.config.BeanDefinition;
 import com.ray.springframework.beans.factory.support.DefaultListableBeanFactory;
+import com.ray.springframework.test.bean.UserService;
 import org.junit.Test;
-import test.bean.UserService;
-
 
 /**
  * @author ray 2023/2/14
  * @description
  */
-
 public class ApiTest {
     @Test
-    public void test_BeanFactory() {
+    public void test_BeanFactory(){
         // 1.初始化 BeanFactory
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         // 2.注册 bean
@@ -26,4 +24,5 @@ public class ApiTest {
         UserService userService_singleton = (UserService) beanFactory.getBean("userService");
         userService_singleton.queryUserInfo();
     }
+
 }
